@@ -1,0 +1,50 @@
+/* Ingredient guide pages (/ingredients/). Builds on styles.css tokens. */
+.ing-page { max-width: 760px; padding-top: 104px; padding-bottom: var(--space-xxxl); }
+.ing-page h1 { font-size: var(--font-size-display-medium); line-height: 1.2; margin-bottom: var(--space-sm); }
+.ing-page h2 { font-size: var(--font-size-display-small); margin: var(--space-xl) 0 var(--space-xs); }
+.ing-page h3 { font-size: var(--font-size-body-large); margin: var(--space-md) 0 var(--space-xxs); }
+.ing-page p, .ing-page li { font-size: var(--font-size-body-large); line-height: 1.6; color: var(--color-text-primary); }
+.ing-page p + p { margin-top: var(--space-xs); }
+.ing-page ul { padding-left: var(--space-md); }
+.ing-crumbs { font-size: var(--font-size-body-small); color: var(--color-text-secondary); margin-bottom: var(--space-md); }
+.ing-crumbs a { color: var(--color-text-secondary); }
+.ing-lede { font-size: 19px !important; }
+
+.ing-verdicts { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-xs); margin: var(--space-lg) 0; }
+.ing-verdict { border-radius: var(--radius-lg); padding: var(--space-md); background: var(--color-surface); border: 2px solid var(--color-border); display: flex; flex-direction: column; gap: 4px; }
+.ing-species { font-size: var(--font-size-body-small); color: var(--color-text-secondary); text-transform: uppercase; letter-spacing: .06em; }
+.ing-tier { font-size: var(--font-size-display-small); font-weight: 700; }
+.ing-safe { border-color: var(--color-score-excellent); } .ing-safe .ing-tier { color: var(--color-score-excellent); }
+.ing-moderation { border-color: var(--color-score-good); } .ing-moderation .ing-tier { color: var(--color-score-good); }
+.ing-caution { border-color: var(--color-score-moderate); } .ing-caution .ing-tier { color: var(--color-score-moderate); }
+.ing-avoid { border-color: var(--color-score-poor); } .ing-avoid .ing-tier { color: var(--color-score-poor); }
+
+.ing-rule { background: var(--color-surface); border-radius: var(--radius-md); padding: var(--space-sm) var(--space-md); margin: var(--space-xs) 0; border-left: 4px solid var(--color-score-moderate); }
+.ing-rule-head { font-weight: 600; }
+.ing-rule-meta { font-size: var(--font-size-body-small) !important; color: var(--color-text-secondary) !important; }
+.ing-sev { display: inline-block; font-size: var(--font-size-caption); font-weight: 700; text-transform: uppercase; padding: 2px 8px; border-radius: var(--radius-pill); margin-right: 6px; color: #fff; background: var(--color-score-moderate); }
+.ing-sev-critical, .ing-sev-high { background: var(--color-score-poor); }
+.ing-sev-info { background: var(--color-info); }
+
+.ing-facts { width: 100%; border-collapse: collapse; background: var(--color-surface); border-radius: var(--radius-md); overflow: hidden; }
+.ing-facts th, .ing-facts td { text-align: left; padding: 10px var(--space-sm); border-bottom: 1px solid var(--color-border); font-size: var(--font-size-body); vertical-align: top; }
+.ing-facts th { width: 38%; color: var(--color-text-secondary); font-weight: 500; }
+.ing-facts tr:last-child th, .ing-facts tr:last-child td { border-bottom: 0; }
+
+.ing-sources li { font-size: var(--font-size-body) !important; }
+.ing-updated, .ing-disclaimer { font-size: var(--font-size-body-small) !important; color: var(--color-text-secondary) !important; margin-top: var(--space-lg); }
+
+.ing-cta { margin: var(--space-xxl) 0 var(--space-xl); padding: var(--space-xl); border-radius: var(--radius-xl); background: var(--color-surface); text-align: center; box-shadow: var(--shadow-md); }
+.ing-cta h2 { margin-top: 0; }
+.ing-cta p { margin-bottom: var(--space-md); }
+
+.ing-related ul, .ing-index { list-style: none; padding-left: 0 !important; }
+.ing-related li { padding: 6px 0; }
+.ing-index li { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px var(--space-sm); padding: 10px 0; border-bottom: 1px solid var(--color-border); }
+.ing-index li a { font-weight: 600; }
+.ing-index li span { font-size: var(--font-size-body-small); color: var(--color-text-secondary); }
+
+@media (max-width: 600px) {
+  .ing-page h1 { font-size: 26px; }
+  .ing-facts th { width: 44%; }
+}
